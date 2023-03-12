@@ -6,7 +6,7 @@ use esp_idf_svc::{
     wifi::EspWifi,
 };
 
-use crate::settings::wifi::CONFIG as wifi_config;
+use crate::settings::wifi::WIFI_CONFIG;
 
 pub struct WifiDriver<'a> {
     pub driver: EspWifi<'a>,
@@ -26,8 +26,8 @@ impl WifiDriver<'_> {
     pub fn configure(&mut self) {
         self.driver
             .set_configuration(&Configuration::Client(ClientConfiguration {
-                ssid: wifi_config.wifi_ssid.into(),
-                password: wifi_config.wifi_psk.into(),
+                ssid: WIFI_CONFIG.wifi_ssid.into(),
+                password: WIFI_CONFIG.wifi_psk.into(),
                 ..Default::default()
             }))
             .unwrap();

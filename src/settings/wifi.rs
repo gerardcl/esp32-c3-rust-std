@@ -1,5 +1,5 @@
 #[toml_cfg::toml_config]
-pub struct Config {
+pub struct WifiConfig {
     #[default("")]
     wifi_ssid: &'static str,
     #[default("")]
