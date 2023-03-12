@@ -1,0 +1,3 @@
+[esp32-c3-rust-std]
+wifi_ssid = "SET_ME"
+wifi_psk = "SET_ME"
